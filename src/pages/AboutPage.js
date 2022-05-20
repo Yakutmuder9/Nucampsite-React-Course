@@ -5,7 +5,7 @@ import SubHeader from "../components/SubHeader";
 const AboutPage = () => {
   return (
     <Container>
-      <SubHeader current="About Us" />
+      <SubHeader current="About Us"></SubHeader>
       <Row className="row-content">
         <Col sm="6">
           <h3>Our Mission</h3>
@@ -41,19 +41,18 @@ const AboutPage = () => {
         <Col>
           <Card className="bg-light mt-3">
             <CardBody>
-              <blockquot className="blockquote">
+              <blockquote className="blockquote">
                 <p>
                   I will not follow where the path may lead, but I will go where
                   there is no path, and I will leave a trail.
                 </p>
                 <footer className="blockquote-footer">
-                Muriel Strode,{" "}
-                <cite title="Source Title">
-                  "Wind-Wafted Wild Flowers" - The Open Court, 1903
-                </cite>
-              </footer>
-              </blockquot>
-              
+                  Muriel Strode,{" "}
+                  <cite title="Source Title">
+                    "Wind-Wafted Wild Flowers" - The Open Court, 1903
+                  </cite>
+                </footer>
+              </blockquote>
             </CardBody>
           </Card>
         </Col>
@@ -62,10 +61,11 @@ const AboutPage = () => {
         <Col xs="12">
           <h3>Community Partners</h3>
         </Col>
-        <PartnersList  />
+        <PartnersList />
       </Row>
     </Container>
   );
 };
 
 export default AboutPage;
+
