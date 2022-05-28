@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import UserLoginForm from '../features/user/UserLoginForm';
 import { 
     Navbar, 
     NavbarBrand,
@@ -43,6 +44,7 @@ const Header = () => {
                         </NavLink>
                     </NavItem>
                 </Nav>
+                <UserLoginForm />
             </Collapse>
         </Navbar>
     );
