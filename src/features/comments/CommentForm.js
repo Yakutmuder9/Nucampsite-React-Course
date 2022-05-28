@@ -8,7 +8,7 @@ import {
   Container,
 } from "reactstrap";
 import { Formik, Field, Form, ErrorMessage } from "formik";
-import validateCommentForm from "../../utils/validateCommentForm";
+import { validateCommentForm } from "../../utils/validateCommentForm";
 
 const CommentForm = ({ campsiteId }) => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -39,7 +39,7 @@ const CommentForm = ({ campsiteId }) => {
             commentText: "",
           }}
           onSubmit={handleSubmit}
-        //   validate={validateCommentForm}
+          validate={validateCommentForm}
         >
           <Form>
             <Container>
@@ -53,7 +53,9 @@ const CommentForm = ({ campsiteId }) => {
                   <option>4</option>
                   <option>5</option>
                 </Field>
-                <ErrorMessage name="rating">Required</ErrorMessage>
+                <ErrorMessage name="rating">
+                  {(msg) => <p className="text-danger">{msg}</p>}
+                </ErrorMessage>
               </FormGroup>
 
               <FormGroup>
@@ -64,7 +66,7 @@ const CommentForm = ({ campsiteId }) => {
                   className="form-control"
                 />
                 <ErrorMessage name="author">
-                  Must be at least 2 characters.
+                  {(msg) => <p className="text-danger">{msg}</p>}
                 </ErrorMessage>
               </FormGroup>
 
@@ -77,7 +79,7 @@ const CommentForm = ({ campsiteId }) => {
                   className="form-control"
                 />
               </FormGroup>
-              <Button type="submit" color="primary">
+              <Button type="submit" color="primary" className="mb-3">
                 Submit
               </Button>
             </Container>
