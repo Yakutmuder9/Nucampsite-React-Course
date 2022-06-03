@@ -18,7 +18,7 @@ const CampsiteDetailPage = () => {
   let content = null;
 
   if (isLoading) {
-    content = <Loading />;
+    content = <Loading />
   } else if (errMsg) {
     content = <Error errMsg={errMsg} />;
   } else {
