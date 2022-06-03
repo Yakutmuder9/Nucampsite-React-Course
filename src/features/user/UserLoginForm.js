@@ -52,6 +52,7 @@ const UserLoginForm = () => {
       <Modal isOpen={loginModalOpen}>
         <ModalHeader toggle={() => setLoginModalOpen(false)}>Login</ModalHeader>
         <ModalBody>
+
           <Formik
             initialValues={{
               username: "",
@@ -90,6 +91,7 @@ const UserLoginForm = () => {
               </Button>
             </Form>
           </Formik>
+          
         </ModalBody>
       </Modal>
     </>
