@@ -38,7 +38,7 @@ const initialState = {
   isLoading: true,
   errMsg: "",
 };
-
+console.log('name')
 const commentsSlice = createSlice({
   name: "comments",
   initialState,
