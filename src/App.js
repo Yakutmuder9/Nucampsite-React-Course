@@ -10,12 +10,17 @@ import './App.css';
 import CampsiteDetailPage from './pages/CampsiteDetailPage';
 import AboutPage from './pages/AboutPage';
 import {fetchCampsites} from './features/campsites/campsitesSlice'
+import {fetchComments}  from'./features/comments/commentsSlice'
 
 function App() {
     const dispatch = useDispatch();
 
     useEffect(() =>{
         dispatch(fetchCampsites());
+    }, [dispatch]);
+    
+    useEffect(() =>{
+        dispatch(fetchComments ());
     }, [dispatch]);
 
     return (
