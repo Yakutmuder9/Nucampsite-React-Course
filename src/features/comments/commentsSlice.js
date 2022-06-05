@@ -82,7 +82,6 @@ export const { addComment } = commentsSlice.actions;
 export const selectCommentsByCampsiteId = (campsiteId) => (state) => {
   console.log(state.comments)
   return state.comments.commentsArray.filter(
-    
     (comment) => comment.campsiteId === parseInt(campsiteId)
   );
 };
